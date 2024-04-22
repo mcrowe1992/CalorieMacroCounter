@@ -118,5 +118,15 @@ namespace Calorie_Macro_Counter.Controllers
         {
             return View();
         }
+
+        public IActionResult OverheadCableTricepsExtension()
+        {
+            return View();
+        }
+
+        public IActionResult TricepPushdown()
+        {
+            return View();
+        }
     }
 }
