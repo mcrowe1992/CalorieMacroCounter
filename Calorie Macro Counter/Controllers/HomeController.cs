@@ -154,6 +154,30 @@ namespace Calorie_Macro_Counter.Controllers
             return View();
         }
 
+        public IActionResult CableCrunch()
+        {
+            return View();
+        }
+
+        public IActionResult HangingLegRaise()
+        {
+            return View();
+        }
+
+        public IActionResult Crunch()
+        {
+            return View();
+        }
+
+        public IActionResult StandingCalfRaise()
+        {
+            return View();
+        }
+
+        public IActionResult SeatedCalfRaise()
+        {
+            return View();
+        }
 
     }
 }
