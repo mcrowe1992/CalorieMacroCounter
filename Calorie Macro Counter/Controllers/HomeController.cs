@@ -78,5 +78,30 @@ namespace Calorie_Macro_Counter.Controllers
         {
             return View();
         }
+
+        public IActionResult Deadlift()
+        {
+            return View();
+        }
+
+        public IActionResult LatPulldown()
+        {
+            return View();
+        }
+
+        public IActionResult PullUp()
+        {
+            return View();
+        }
+
+        public IActionResult BarbellRow()
+        {
+            return View();
+        }
+
+        public IActionResult DumbbellRow()
+        {
+            return View();
+        }
     }
 }
