@@ -103,5 +103,20 @@ namespace Calorie_Macro_Counter.Controllers
         {
             return View();
         }
+
+        public IActionResult BarbellCurl()
+        {
+            return View();
+        }
+
+        public IActionResult DumbbellCurl()
+        {
+            return View();
+        }
+
+        public IActionResult HammerCurl()
+        {
+            return View();
+        }
     }
 }
