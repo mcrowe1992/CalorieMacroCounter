@@ -148,5 +148,12 @@ namespace Calorie_Macro_Counter.Controllers
         {
             return View();
         }
+
+        public IActionResult HipThrust()
+        {
+            return View();
+        }
+
+
     }
 }
