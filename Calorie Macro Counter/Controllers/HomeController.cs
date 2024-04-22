@@ -128,5 +128,20 @@ namespace Calorie_Macro_Counter.Controllers
         {
             return View();
         }
+
+        public IActionResult Squat()
+        {
+            return View();
+        }
+
+        public IActionResult LegExtension()
+        {
+            return View();
+        }
+
+        public IActionResult LegPress()
+        {
+            return View();
+        }
     }
 }
