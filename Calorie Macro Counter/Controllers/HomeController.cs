@@ -18,31 +18,6 @@ namespace Calorie_Macro_Counter.Controllers
 			return View();
 		}
 
-        // Get: /FoodItem/Create
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost] //This action is hit after the user submits form data
-        public IActionResult Create(IFormCollection formData)
-        {
-            // Validate all data
-
-            FoodItem f = new()
-            {
-                Name = formData["name"],
-                Calories = Convert.ToDouble(formData["calories"]),
-                Quantity = Convert.ToInt32(formData["quantity"])
-            };
-
-            // Add to database
-            // FoodItemDb.add(f);
-
-            // Return a view
-            return RedirectToAction("Index", "Home");
-        }
 
         public IActionResult Privacy()
 		{

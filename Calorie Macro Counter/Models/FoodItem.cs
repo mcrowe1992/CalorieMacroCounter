@@ -10,8 +10,6 @@ namespace Calorie_Macro_Counter.Models
         
         public string Name { get; set; }
 
-        public int Quantity { get; set; }
-
         public double Calories { get; set; }
 
         public double Protein { get; set; }
