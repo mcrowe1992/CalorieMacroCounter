@@ -32,7 +32,7 @@ namespace Calorie_Macro_Counter.Controllers
 
             FoodItem f = new()
             {
-                Name = formData["name"]
+                Name = formData["name"],
                 Calories = Convert.ToDouble(formData["calories"]),
                 Quantity = Convert.ToInt32(formData["quantity"])
             };

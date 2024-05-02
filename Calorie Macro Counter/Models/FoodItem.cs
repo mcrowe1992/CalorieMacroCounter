@@ -10,36 +10,12 @@ namespace Calorie_Macro_Counter.Models
         
         public string Name { get; set; }
 
-        public bool ChickenBreast { get; set; }
+        public int Quantity { get; set; }
 
-        public bool ChickenThigh { get; set; }
-
-        public bool Steak { get; set; }
-
-        public bool BeefGround { get; set; }
-
-        public bool TurkeyGround { get; set; }
-
-        public bool RiceWhite { get; set; }
-
-        public bool RiceBrown { get; set; }
-
-        public bool Broccoli { get; set; }
-
-        public bool Onion { get; set; }
-
-        public bool BellPepper { get; set; }
-
-        public bool Potato { get; set; }
-
-        public bool Egg { get; set; }
-
-        public bool Salad { get; set; }
-
-        public bool CookingOil { get; set; }
-
-        [DataType(DataType.Currency)]
         public double Calories { get; set; }
 
+        public double Protein { get; set; }
+        public double Carbs { get; set; }
+        public double Fat { get; set; }
     }
 }
