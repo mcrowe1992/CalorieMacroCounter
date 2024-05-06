@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Calorie_Macro_Counter.Data;
 using Calorie_Macro_Counter.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Calorie_Macro_Counter.Controllers
 {
@@ -44,6 +45,7 @@ namespace Calorie_Macro_Counter.Controllers
         }
 
         // GET: FoodItems/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
