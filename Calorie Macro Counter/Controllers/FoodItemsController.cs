@@ -23,7 +23,22 @@ namespace Calorie_Macro_Counter.Controllers
         // GET: FoodItems
         public async Task<IActionResult> Index()
         {
-            return View(await _context.FoodItems.ToListAsync());
+            var foodItems = await _context.FoodItems.ToListAsync();
+            var totalCalories = foodItems.Sum(f => f.Calories);
+            var totalProtein = foodItems.Sum(f => f.Protein);
+            var totalFat = foodItems.Sum(f => f.Fat);
+            var totalCarbohydrates = foodItems.Sum(f => f.Carbs);
+
+            var viewModel = new FoodItemIndexViewModel
+            {
+                FoodItems = foodItems,
+                TotalCalories = (int)totalCalories,
+                TotalProtein = (int)totalProtein,
+                TotalFat = (int)totalFat,
+                TotalCarbohydrates = (int)totalCarbohydrates
+            };
+
+            return View(viewModel);
         }
 
         // GET: FoodItems/Details/5
@@ -52,8 +67,7 @@ namespace Calorie_Macro_Counter.Controllers
         }
 
         // POST: FoodItems/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Quantity,Calories,Protein,Carbs,Fat")] FoodItem foodItem)
@@ -68,27 +82,17 @@ namespace Calorie_Macro_Counter.Controllers
         }
 
         // GET: FoodItems/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var foodItem = await _context.FoodItems.FindAsync(id);
-            if (foodItem == null)
-            {
-                return NotFound();
-            }
-            return View(foodItem);
+            return View();
         }
 
+
+
         // POST: FoodItems/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Quantity,Calories,Protein,Carbs,Fat")] FoodItem foodItem)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Calories,Protein,Fat,Carbohydrates")] FoodItem foodItem)
         {
             if (id != foodItem.Id)
             {
@@ -116,6 +120,11 @@ namespace Calorie_Macro_Counter.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(foodItem);
+        }
+
+        private bool FoodItemExists(int id)
+        {
+            return _context.FoodItems.Any(e => e.Id == id);
         }
 
         // GET: FoodItems/Delete/5
@@ -151,9 +160,6 @@ namespace Calorie_Macro_Counter.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool FoodItemExists(int id)
-        {
-            return _context.FoodItems.Any(e => e.Id == id);
-        }
+        
     }
 }
