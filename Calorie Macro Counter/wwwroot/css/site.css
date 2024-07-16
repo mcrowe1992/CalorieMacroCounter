@@ -1,49 +1,41 @@
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 html {
     font-size: 14px;
     position: relative;
     min-height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5; /* Light grey background for the entire page */
-    color: #343a40; /* Dark grey text */
-    font-family: 'Arial', sans-serif; /* Change the font family for a cleaner look */
+    background-color: #f9f9f9; /* Light grey background for the entire page */
+    color: #333; /* Dark grey text */
     margin-top: 50px;
 }
 
 header {
-    background-color: #007bff; /* Primary blue for the header */
+    background-color: #2c3e50; /* Dark blue-grey for the header */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 h1.display-1 {
     font-weight: bold;
-    color: #007bff; /* Primary blue color for the main heading */
+    color: #e74c3c; /* Red color for the main heading */
 }
 
 h2.display-6 {
     margin: 20px 0;
-    color: #6c757d; /* Secondary grey color for subheadings */
+    color: #7f8c8d; /* Lighter grey color for subheadings */
 }
 
 .p-3 {
     margin-top: 20px;
     font-size: 1.2rem;
-    background-color: #d1ecf1; /* Light blue background for the feature list */
-    color: #0c5460; /* Dark blue text for the feature list */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #ecf0f1; /* Very light grey background for the feature list */
+    color: #34495e; /* Dark grey-blue text for the feature list */
+    border-radius: 8px; /* Slightly more rounded corners */
 }
 
 .table-responsive {
@@ -52,38 +44,48 @@ h2.display-6 {
 
 .table {
     background-color: #ffffff; /* White background for the table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 }
 
     .table thead {
-        background-color: #007bff; /* Primary blue background for the table header */
+        background-color: #34495e; /* Dark blue-grey background for the table header */
         color: #ffffff; /* White text for the table header */
     }
 
     .table tbody tr:hover {
-        background-color: #f1f1f1; /* Light grey background for table rows on hover */
+        background-color: #ecf0f1; /* Very light grey background for table rows on hover */
     }
 
 .img-thumbnail {
     margin: 10px;
     max-height: 300px;
-    border-color: #007bff; /* Blue border for images */
-    border-radius: 50%; /* Make images circular */
+    border-color: #e74c3c; /* Red border for images */
+    border-radius: 8px; /* Slightly rounded corners */
 }
 
 footer {
     margin-top: 40px;
     padding: 20px 0;
-    background-color: #343a40; /* Dark grey background for the footer */
+    background-color: #2c3e50; /* Dark blue-grey background for the footer */
     color: #ffffff; /* White text for the footer */
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 }
 
 .container-custom {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for container depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for container depth */
     margin-top: 20px;
 }
+
+a.btn-primary {
+    background-color: #e74c3c; /* Red for primary buttons */
+    border-color: #e74c3c;
+}
+
+    a.btn-primary:hover {
+        background-color: #c0392b; /* Darker red for hover state */
+        border-color: #c0392b;
+    }
