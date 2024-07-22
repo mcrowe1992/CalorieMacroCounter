@@ -1,91 +1,145 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-html {
-    font-size: 14px;
-    position: relative;
-    min-height: 100%;
+/* Basic Reset and Font Styling */
+html, body {
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
-body {
-    background-color: #f9f9f9; /* Light grey background for the entire page */
-    color: #333; /* Dark grey text */
-    margin-top: 50px;
-}
-
+/* Header Styling */
 header {
-    background-color: #2c3e50; /* Dark blue-grey for the header */
+    background-color: #343a40;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 60px; /* Adjust based on header height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 900;
+}
+
+    .navbar a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+/* Main Container Styling */
+.container-custom {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Adjust the margin-top for the main container to prevent it from being covered by the navbar */
+body {
+    padding-top: 120px; /* Adjust this value according to the combined height of your header and navbar */
+}
+
+/* Typography */
 h1.display-1 {
-    font-weight: bold;
-    color: #e74c3c; /* Red color for the main heading */
+    font-weight: 700;
+    color: #007bff;
 }
 
 h2.display-6 {
     margin: 20px 0;
-    color: #7f8c8d; /* Lighter grey color for subheadings */
+    color: #6c757d;
 }
 
 .p-3 {
     margin-top: 20px;
     font-size: 1.2rem;
-    background-color: #ecf0f1; /* Very light grey background for the feature list */
-    color: #34495e; /* Dark grey-blue text for the feature list */
-    border-radius: 8px; /* Slightly more rounded corners */
+    background-color: #e9ecef;
+    color: #495057;
+    border-radius: 8px;
+    padding: 20px;
 }
 
+/* Table Styling */
 .table-responsive {
     margin-top: 20px;
 }
 
 .table {
-    background-color: #ffffff; /* White background for the table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
 }
 
-    .table thead {
-        background-color: #34495e; /* Dark blue-grey background for the table header */
-        color: #ffffff; /* White text for the table header */
+    .table th, .table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .table th {
+        background-color: #343a40;
+        color: white;
     }
 
     .table tbody tr:hover {
-        background-color: #ecf0f1; /* Very light grey background for table rows on hover */
+        background-color: #f8f9fa;
     }
 
+/* Image Thumbnail Styling */
 .img-thumbnail {
     margin: 10px;
     max-height: 300px;
-    border-color: #e74c3c; /* Red border for images */
-    border-radius: 8px; /* Slightly rounded corners */
+    border-color: #343a40;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
+    .img-thumbnail:hover {
+        transform: scale(1.05);
+    }
+
+/* Footer Styling */
 footer {
     margin-top: 40px;
     padding: 20px 0;
-    background-color: #2c3e50; /* Dark blue-grey background for the footer */
-    color: #ffffff; /* White text for the footer */
+    background-color: #343a40;
+    color: white;
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container-custom {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for container depth */
-    margin-top: 20px;
-}
-
+/* Button Styling */
 a.btn-primary {
-    background-color: #e74c3c; /* Red for primary buttons */
-    border-color: #e74c3c;
-}
-
-    a.btn-primary:hover {
-        background-color: #c0392b; /* Darker red for hover state */
-        border-color: #c0392b;
-    }
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
